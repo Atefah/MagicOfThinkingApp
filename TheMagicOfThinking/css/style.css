@@ -1,0 +1,205 @@
+
+		body{
+			background-image: url("../img/66.jpg");
+			padding: 0;
+			margin: 0
+
+		}
+		#wrapper{
+			height: 100%;
+			width: 100%;
+			background-color: rgba(0,0,0,0.3);
+
+		}
+		#container{
+			background-image: url("../img/014.jpg");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			height: 678px;
+			width: 450px;
+		}
+		#play{
+			float: right;
+			margin-top: 2px;
+			margin-right: 5px;
+			width: 40px;
+			height: 40px;
+		}
+		#NameGame{
+			height: 190px;
+			width: 350px;
+			margin: -40px 60px;
+		}
+		#link1,#link2,#link3,#link4{
+			color: white;
+			font-size: 20px;
+			font-family: "2  Yekan";
+			text-decoration: none;
+			text-align: center;
+			padding-left:30px;
+			line-height:3.5em;
+		}
+		#strat:hover{
+			 filter: grayscale(100%);
+
+		}
+		#exit:hover{
+			 filter: grayscale(100%);
+
+		}
+		#strat,#about,#description,#exit{
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			width: 170px;
+			height:80px;
+			text-align: center;
+		}
+		#strat{
+			margin-top: 0px;
+			background-image: url("../img/63.png");
+		}
+		#about{
+			float: left;
+			margin-top:-5px; 
+			background-image: url("../img/61.png");
+		}
+		#description{
+			margin-top: -5px;
+			float: right;
+			background-image: url("../img/68.png");
+		}
+		#exit{
+			margin-top: 20px;
+			background-image: url("../img/64.png");
+		
+		}
+		#parawana1{
+			margin-bottom: 70px;
+			margin-left: 0px;
+
+		}
+		#parawana2{
+			margin-bottom: 40px;
+			margin-left: 140px;
+
+		}
+
+		#byscil{
+			margin-top: 150px;
+			width: 80px;
+			height: 80px;
+			position: relative;
+			-webkit-animation: mymove 8s infinite linear; 
+		}
+			@keyframes mymove {
+	   		 0% { right:-120px; }
+    		100% { right: 200px;}
+		}
+		
+		
+		#flage{
+			width: 60px;
+			height: 50px;	
+			margin-right:350px;
+			margin-top: 10px;
+		}
+		h2,h1,h3{
+			text-align: center;
+			font-size: 30px;
+			font-family: "2  Yekan";
+			color: purple;
+		}
+		#myModal{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display:none;
+		}
+		#content{
+			background-image: url("../img/564.jpg");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			text-align: right;
+			direction: rtl;
+			height: 678px;
+			width: 450px;
+			padding: 2%;
+			margin: 0% auto;
+		}
+		#close{
+			float: right;
+			width: 40px;
+			padding: 2px;
+			height: 32px;
+			outline: none;
+			border: none;
+			background-color: white;
+			color: red;
+			font-size: 18px;
+			
+		}
+		#close:hover{
+			background-color: red;
+			color:white;
+			cursor: pointer;
+		}
+		#content,p{
+			color: black;
+			font-size: 16px;
+			font-family: "2  Yekan"; 
+			text-align: justify;
+			opacity: 1;
+  			animation: fadeIn 2.5s ease;
+		}
+		@keyframes fadeIn{
+		 	 0%{opacity: 0;}
+		  	100%{opacity: 1;}
+		}
+
+		#i{
+	      font-size: 30px;
+	      color: black;
+	      float: left;
+	      margin-left: 10px;
+	    }
+	    #i:hover{
+	      font-size: 35px;
+	      color: gray;
+
+	    }
+	     
+	    #font{
+	    	padding:20px;
+	    }
+
+		@media only screen and (max-width: 720px){
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			#container{
+				width: 100%;
+				height: 100%;
+			}
+			#image{
+				height: 190px;
+				width: 200px;	
+			}	
+			#byscil{
+				display: none;
+			}
+			#exit {
+				margin-top: 40px;
+			}
+
+			#parawana1,#parawana2{
+				display: none;
+
+			}
+			#NameGame{
+				height: 150px;
+				width: 250px;
+				margin: -20px 60px;
+			}

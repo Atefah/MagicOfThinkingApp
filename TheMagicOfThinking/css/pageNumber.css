@@ -1,0 +1,107 @@
+#container{
+			background-image: url("../img/564.jpg");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			height: 678px;
+			width: 450px;
+		}
+		body{
+			background-image: url("../img/66.jpg");
+			padding: 0;
+			margin: 0
+
+		}
+		#wrapper{
+			height: 100%;
+			width: 100%;
+			background-color: rgba(0,0,0,0.3);
+
+		}
+		#image{
+			height: 250px;
+			width: 380px;
+			margin-top:-28px;
+		}
+		table{
+			width: 200px;
+			height: 250px;
+			
+		}
+		.lock{
+			width: 30px;
+			height: 30px;
+		}
+		.btn,.btns,#Home,#Exit{
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			outline: none;
+			border: none;
+		}
+		.btns{
+			width:50px;
+			height: 50px;
+			background-image: url("../img/17.jpg");
+			filter: grayscale(100%);
+			
+		}
+		.btn{
+			width:50px;
+			height: 50px;
+			background-image: url("../img/17.jpg");
+		}
+		
+		.btn a{
+			display:block;
+			color: #ffff1a;
+			text-decoration: none;
+			font-size: 25px;
+		}
+		#Home{
+			background-image: url("../img/62.png");
+			float: left;
+		}
+		#Home,#Exit{
+			width: 120px;
+			height: 60px;
+			line-height:3.5em;
+			padding-left:20px;
+		}
+		#Exit{
+			background-image: url("../img/64.png");
+			float: right;
+		}
+		#Home:hover{
+			 filter: grayscale(100%);
+
+		}
+		#Exit:hover{
+			 filter: grayscale(100%);
+
+		}
+		.link{
+			font-weight: bold;
+			text-decoration: none;
+			width: 150px;
+			height: 50px;
+			font-family: "2  Yekan";
+			color: white;
+			
+		}
+		
+		@media only screen and (max-width: 720px){
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			#container{
+				width: 100%;
+				height: 100%;
+			}
+			#image{
+			height: 190px;
+			width: 200px;
+			
+		}
+
+
+}

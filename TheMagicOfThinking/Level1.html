@@ -1,0 +1,213 @@
+<html>
+<head>
+	<link rel="shortcut icon" type="image/png" href="img/home.png">
+	<link href="css/animate.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/level1.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Game page</title>
+</head>
+<body>
+   <div id="wrapper">
+	<center>
+		<div id="container" class="animated">
+			<div id="Home">
+				<a href="index.html" class="link" id="H">خانه</a>
+			</div>
+			<button id="Score">نمره</button>
+			<div id="Exit">
+				<a href="#" class="link" onclick="closeWindow()">خروج</a>
+			</div>
+			<img src="img/012.png" id="image">
+			<div id="firstdiv">
+				<tr>
+					<p id="para" class="demo"></p>
+					<button id="clear" onclick="Clear()">پاکن</button>
+
+					<div id="Wendone">
+						<center><h1 id="correct">عالی</h1></center>
+					</div>
+					<div id="False">
+						<center><h1 id="incorrect">اشتباه</h1></center>
+					</div>
+				</tr>
+			</div><br>
+			<div id="seconddiv">
+					<tr>
+						<td><button class="b" id="btn"></button></td>
+					</tr><br>
+					<tr>
+						<td><button  class="b" id="btn1"></button></td>
+						<td><button  onclick="checkAnswer()" id="btn5">چک</button></td>
+						<td><button  class="b" id="btn2"></button></td>
+					</tr><br>
+					<tr>
+						<td><button class="b" id="btn3"></button></td>
+						<td><button class="b" id="btn4"></button></td>
+					</tr>
+				</div>
+				<div id="win">
+					<button id="btnclose"><a href="PageNumber.html">X</a></button>
+					<h3 id = "nomra"></h3>
+					<img src="img/transparent (2).png" id="ima1" class="end">
+					<img src="img/transparent (2).png" id="ima2" class="end">
+					<img src="img/transparent (2).png" id="ima3" class="end">
+				</div>
+		</center>
+	  </div>
+	</div>
+
+ <script>
+	//Acsess to eloemens
+	var sound = new Audio("audio/clapin sound.mp4");
+ 	var sound1 = new Audio("audio/faild.mp4");
+	var win = document.getElementById("win");
+	var b=document.getElementsByClassName("b");
+	var btnclose = document.getElementById("btnclose");
+	var para = document.getElementById('para');
+	var scoretext  = document.getElementById("Score");
+	//code for writing word
+	var letter = " ";
+	for (var i =0; i < b.length; i++) {
+		b[i].addEventListener("click", function(ev){
+			letter= ev.target.innerHTML;
+			para.innerHTML+=letter;
+			
+	});
+	}
+	 function clearData() {
+		for(var i=0; i<b.length; i++)
+			 b[i].innerHTML = "";
+	  }
+	//start array
+	var question, chA, chB, chC,chD,chE, score=0, num=0, choices;
+	var Questions = [
+				["خ","ر","گ","ش","و","خرگوش","خر","گرگ"],
+				["ا","ن","گ","و","ر","انگور","انار","گرگ"],
+				["س","و","م","ن","ی","سوسنی","سوسن","سامی"]
+	];
+	function _(x){
+		return document.getElementById(x);
+	}
+	function checkAnswer(){
+		if(para.innerHTML == Questions[num][5]|| para.innerHTML==Questions[num][6]|| para.innerHTML==Questions[num][7]){
+			score+=2;
+			scoretext.innerHTML=score+"/"+Questions.length;
+			var correct = document.getElementById("correct");
+			para.style.backgroundImage="url(img/22222.gif)";
+			sound.play();
+			Wendone.style.display="block";
+			para.innerHTML = "";
+			num++;
+		}
+		else if(para.innerHTML =" " || para.innerHTML!=Questions[num][5]||para.innerHTML!=Questions[num][6]|| para.innerHTML!=Questions[num][7] ){
+				 para.innerHTML ="";
+				 para.style.backgroundImage="url(img/f.jfif)";
+				  False.style.display="block";
+				sound1.play();
+				 window.setTimeout(function(){clearData();}, 1000);
+				
+
+		 }    		
+		setTimeout(renderQuestion, 3000);
+		setTimeout('removeme()', 3000);
+	}
+
+	function renderQuestion(){
+		if (num >= Questions.length) {
+			for (var i = 0; i < b.length; i++) {
+				b[i].innerHTML = "";
+		}	
+		if(score >= 3){
+				document.getElementById('win').style.display="block";
+				document.getElementById('nomra').innerHTML ="<h2>تبریک</h2>"+"شما گرفتید " + score + " نمره از " + Questions.length + " سوال ";
+				 }
+			score = 0;
+			return false;
+			} 
+		
+		chA = Questions[num][0];
+		chB = Questions[num][1];
+		chC = Questions[num][2];
+		chD = Questions[num][3];
+		chE = Questions[num][4];
+
+		_("btn").innerHTML =chA;
+		_("btn1").innerHTML = chB;
+		_("btn2").innerHTML = chC;
+		_("btn3").innerHTML =chD;
+		_("btn4").innerHTML =chE;
+			}
+		window.addEventListener("load", renderQuestion);
+		// code for clean the  a char
+		var data;
+		function Clear() {
+			data = para.innerHTML;
+			var c = data.substr(0, data.length-1);
+		    para.innerHTML = c;
+
+		}
+		//none display div after every correct answear
+		function removeme () {
+			correct.style.display="none";
+			False.style.display="none";
+			para.style.backgroundImage="";
+			sound.pause();
+			sound1.pause();
+		
+		}
+
+		//last div that display
+		var a =document.getElementById("ima1");
+		var b =	document.getElementById("ima2");
+		var c = document.getElementById("ima3");
+		var end = document.getElementsByClassName("end");
+		end[0].onclick = function  () {
+					this.style.animation="none";
+					a.src = "img/6.gif";
+					var sound = new Audio("audio/clapin sound.mp4");
+					sound.play();
+					b.style.display="none";
+					c.style.display="none";
+					a.style.height="250px";
+					a.style.width="410px";
+					a.style.marginTop="0px";
+				}
+		end[1].onclick = function  () {
+					this.style.animation="none";
+					b.src = "img/5.gif";
+					var sound = new Audio("audio/clapin sound.mp4");
+					sound.play();
+					b.style.height="250px";
+					b.style.width="410px";
+					b.style.marginTop="0px";
+					a.style.display="none";
+					c.style.display="none";
+				}
+			end[2].onclick = function  () {
+					this.style.animation="none";
+					c.src = "img/4.gif";
+					c.style.height="250px";
+					var sound = new Audio("audio/clapin sound.mp4");
+					sound.play();
+					c.style.width="410px";
+					c.style.marginTop="0px";
+					b.style.display="none";
+					a.style.display="none";
+				}
+			//btn close for end dive that display
+			btnclose.addEventListener("click",function () {
+			win.style.display="none";
+			btnclose.href="PageNumber.html";
+		});
+		//btn exit
+		function closeWindow () {
+	    			if(confirm("you want to close this window?")){
+	    			window.close();
+	    			}
+	   		 }
+			
+
+	</script>
+</body>
+</html>

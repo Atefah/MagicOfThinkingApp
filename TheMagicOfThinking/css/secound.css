@@ -1,0 +1,171 @@
+#container{
+			background-image: url("../img/564.jpg");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			height: 678px;
+			width: 450px;
+		}
+		body{
+			background-image: url("../img/66.jpg");
+			padding: 0;
+			margin: 0
+
+		}
+		#wrapper{
+			height: 100%;
+			width: 100%;
+			background-color: rgba(0,0,0,0.3);
+
+		}
+		#image{
+			height: 250px;
+			width: 380px;
+			margin-top:-28px;
+		}
+		table{
+			width: 200px;
+			height: 250px;
+			
+		}
+		.lock{
+			width: 30px;
+			height: 30px;
+		}
+		.btns{
+			width:50px;
+			height: 50px;
+			background-image: url("../img/17.jpg");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			color: #ffbf00;
+			cursor: pointer;
+			font-size: 20px;
+		}
+		.btns:hover{
+				filter: grayscale(100%);
+		}
+		.btns a{
+			display:block;
+			color:#ffbf00;
+			/*text-shadow:2px 2px 5px yellow;*/
+			text-decoration: none;
+		}
+			#Home{
+			background-image: url("../img/62.png");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			width: 120px;
+			height: 60px;
+			line-height:3.5em;
+			padding-left:20px;
+
+		}
+		#Exit{
+			background-image: url("../img/64.png");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			width: 120px;
+			height: 60px;
+			line-height:3.5em;
+			padding-left:20px;
+
+		}
+		#Home{
+			float: left;
+
+		}
+		#Exit{
+			float: right;
+		}
+		#Home:hover{
+			 filter: grayscale(100%);
+
+		}
+		#Exit:hover{
+			 filter: grayscale(100%);
+
+		}
+		.link{
+			font-weight: bold;
+			text-decoration: none;
+			width: 150px;
+			height: 50px;
+			font-family: "2  Yekan";
+			color: white;
+			
+		}
+		#myModal{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: none;
+		}
+		#content{
+			background-image: url("../img/77.gif");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			text-align: right;
+			direction: rtl;
+			height:200px;
+			width: 200px;
+			padding: 2%;
+			margin: 21% auto;
+		}
+		#close{
+			float: right;
+			width: 30px;
+			margin-right: -15px;
+			margin-top: -20px;
+			padding: 2px;
+			height: 30px;
+			background-color: white;
+			color: red;
+			font-size: 18px;
+			
+		}
+		#close a:hover{
+			color:white;
+			cursor: pointer;
+		}
+		#close:hover{
+			background-color: red;
+			color:white;
+			cursor: pointer;
+		}
+		#content,h1{
+			color: white;
+			font-size: 40px;
+			padding-top: 30px;
+			font-family: "2  Yekan"; 
+			text-align: justify;
+			text-align: center;
+			opacity: 1;
+  			animation: fadeIn 3s ease;
+		}
+		@keyframes fadeIn{
+		  0%{
+		    opacity: 0;
+		  }
+		  100%{
+		    opacity: 1;
+		  }
+		}
+		@media only screen and (max-width: 720px){
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			#container{
+				width: 100%;
+				height: 100%;
+			}
+			#image{
+			height: 190px;
+			width: 200px;
+			
+		}
+
+
+}

@@ -1,0 +1,145 @@
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="shortcut icon" type="image/png" href="img/home.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet" type = "text/css" href = "font-awesome-4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+	</style>
+	</head>
+	<body>
+		<center>
+			<div id = "wrapper">
+			<div id="container">
+				<img src="img/transparent.png" onclick="playPause()" id="play">
+				<video  width="2" height="2"  id="myvideo">
+				 	 <source src="audio/videoplayback (1).mp4" type="video/mp4">
+				</video>
+				<img src="img/012.png" id="NameGame">
+				<div id="strat">
+					<a href="PageNumber.html" id="link3">شروع</a>
+				</div>
+				<div id="about">
+					<a id="link4" href="#">درباره</a>
+				<div id="myModal">
+					<div id="content">
+						<button id="Close">X</button>
+						<h2 id="h2"></h2>
+						<h3 id="h3"></h3>
+						<p id="para2" ></p>
+						<p id="para"></p>
+						<h1 id="font">
+             			 <center>
+                			 <a href="https://twitter.com/">
+                    		<i class="fa fa-twitter-square" id="i"></i>
+               				 </a>
+               				 <a href="https://www.facebook.com">
+                   			 <i class="fa fa-facebook-square" id="i"></i>
+                			 </a>
+               				 <a href="https://mail.google.com/mail">
+                   			 <i class="fa fa-envelope-square" id="i"></i>
+               				 </a>
+              				</center>
+						</h1>
+					</div>
+				</div>
+				</div>
+				<div id="description">
+					<a id="link2" href="#">توضیحات</a>	
+				</div>
+				<br>
+				<div id="exit">
+					<a href="#" id="link1" onclick="closeWindow()">خروج</a>
+				</div>
+				<img src="img/(1).gif" id="flage">
+				<img src="img/10.gif" id="parawana1">
+				<img src="img/8.gif" id="parawana2">
+				<img src="img/byscil.gif" id="byscil">
+			</div>
+			</div>
+		</center>
+		<script type="text/javascript">
+		//paly video code..................
+			var myvideo = document.getElementById('myvideo');
+			var p= document.getElementById("play");
+
+			function playPause() { 
+			    if (myvideo.paused){
+			        myvideo.play();
+			        p.src="img/11.png"; 
+			    }else{ 
+			        myvideo.pause();
+			         p.src="img/transparent.png"; 
+			}
+			}
+				//modal code.............................
+				var btn = document.getElementById('link4');
+				var description = document.getElementById("description");
+				var about = document.getElementById("about");
+				var btn1 = document.getElementById('link2');
+				var btn3 = document.getElementById('link1');
+				var btn2 = document.getElementById('link3');
+				var h2 = document.getElementById("h2");
+				var h3 = document.getElementById("h3");
+				var para = document.getElementById("para");
+				var myModal = document.getElementById('myModal');
+				var Close=document.getElementById('Close');
+				var byscil = document.getElementById("byscil");
+				var parawana1=document.getElementById("parawana1");
+				var parawana2=document.getElementById("parawana2");
+				var font =document.getElementById("font");
+				
+				Close.onclick = function () {
+					description.style.display="block";
+					about.style.display="block";
+				}
+				about.onclick=function () {
+					byscil.style.display="none";
+					parawana1.style.display="none";
+					parawana2.style.display="none";
+				}
+				description.onclick = function  () {
+					this.style.display="none";
+					byscil.style.display="none";
+					parawana1.style.display="none";
+					parawana2.style.display="none";
+				}
+		
+				btn.addEventListener("click",function(){
+					myModal.style.display="block";
+					h2.innerHTML="درباره ما";
+					font.style.display="block";
+					h3.innerHTML="";
+					para.innerHTML="این گیم ساخته شده توسط گروه ما (عاطفه و ماریه) و نام گیم ما (جادوی فکر ) است .ما دو تا سخت بروی این پروژه کار کردیم ما خیلی علاقه مند کد نویسی هستیم.وما در این بازی از زبان های(CSS, HTMLو JAVASCRIPT)استفاده کردیم.<br> من ماریه هستم نام پدر من عبداللطیف است 20 ساله و وسلطانی تخلص می کنم.محصل سمستر سوم پوهنحی کامپیوتر ساینس هستم و در طی 8 ماه که در موسسه اینجو کد نویسی (CTI) راه یافتم و درس می آموزم توانستم در قسمت زبان های برنامه نویسی چون:(JAVASCRIPT and JAVA ,CSS ,HTM) آشنایی پیدا نمودم.<br>من عاطفه هستم نام پدر من قوس احمد است 20 ساله و تخلص من محمدی است .محصل سمستر سوم پوهنحی کامپیوتر ساینس هستم . درطی یکسال ماه که در موسسه اینجو کد نویسی (CTI) راه یافتم و درس می آموزم توانستم در قسمت زبان های برنامه نویسی چون:(HTML, CSS,JAVA ,JAVASCRIPT,J-QUERY,BOOTSRAP) تسلط کامل پیدا کنم. و توانسستیم با همکاری خانم ماریه سلطانی  یک گیم را بسازیم.<br> و در آخر میخواهیم تشکر ویژه داشته باشیم ازاستاد (فرشته فروغ) که چنین مکانی مجهز برای ما مساعد ساختند و تمام کارکنان   بخصوص استادان زحمت کش وموفق این موسسه که همیشه به خدمت ماهستد امیدوارم که همیشه موفق وسربلند درتمام عرصه های زنده گی خود باشند. </h5>";
+				});
+				btn1.addEventListener("click",function(){
+					myModal.style.display="block";
+					font.style.display="none";
+					h2.innerHTML="";
+					h3.innerHTML="معرفی بازی جادوی فکر";
+					para.innerHTML="بازی زیبای جادوی فکرسبک پازلی دارد و ذهن گیمر را به چالش می‌کشد. حل پازل های بازی باید با تمرکز بر روی پیدا کردن کلمات صحیح در یک جدول پر شده با حروف مختلف صورت پذیرد.<br>هنگامی که بازی جادوی فکر را اجرا می‌کنید با رابط کاربری چشم نواز و رنگارنگ آن رو به رو خواهید شد. همچنین موسیقی پس زمینه بازی هم با تم سنتی خود بر زیبایی های آن می‌افزاید. با لمس گزینه “شروع بازی” شاهد آغاز مرحله نخست آن خواهید بود. حالا شما 12 مرحله را برای پشت سر گذاشتن، پیش روی خود دارید.در مراحل بازی زیبای جادوی فکر شما با یک جدول مواجه می‌شوید که حروفی فارسی در هر یک از خانه های آن قرار داده شده‌اند. شما باید سعی کنید که با توجه به حروف موجود در جدول، کلمه مورد نظر را های جدول کم هستند و مطمئنا حدس زدن کلمات هم ساده تر خواهند بود، اما زمانی که در بازی پیشروی کنید، خانه های جدول افزایش یافته و حدس زدن کلمات هم به مراتب سخت تر می‌شوند.حدس بزنید. سپس باید با موس حرف مورد نظر انتخاب کنید. در مراحل ابتدایی بازی تعداد خانه ";
+				});
+				Close.addEventListener("click",function  () {
+					myModal.style.display="none";
+					byscil.style.display="block";
+					byscil.style.marginTop="160px";
+				});
+				window.addEventListener("click",function  (event) {
+					if(event.target == myModal){
+						myModal.style.display="none";
+						description.style.display="block";
+						byscil.style.display="block";
+						byscil.style.marginTop="160px";
+					}
+				});
+
+				//close code..................
+				function closeWindow () {
+	    			if(confirm("you want to close this window?")){
+	    			window.close();
+	    			}
+	   		 }
+	</script>
+</body>
+</html>

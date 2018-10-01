@@ -1,0 +1,293 @@
+	#container{
+			background-image: url("../img/22.jpg");
+			height: 675px;
+			width: 450px;
+		}
+		body{
+			background-image: url("../img/66.jpg");
+			padding: 0;
+			margin: 0
+
+		}
+		#wrapper{
+			height: 100%;
+			width: 100%;
+			background-color: rgba(0,0,0,0.3);
+
+		}
+		#image{
+			height: 130px;
+			width: 300px;
+			margin-top: -10px;
+			
+		}
+		#firstdiv{
+			width: 450px;
+			height: 210px;
+			background-image: url("../img/1.png");
+		}
+		#seconddiv{
+			width: 200px;
+			height: 200px;
+			background-image: url("../img/sonati.jpg");
+			border-radius: 50%;
+			box-shadow: border-box;
+			border: 10px solid #a6a6a6;  
+		}
+		#btn3,#btn4{
+			margin: 10px 20px;
+
+		}
+		#btn{
+			margin: 10px 0px;
+		}
+		
+		.b,#btn5{
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+			font-size: 20px;
+			background-color: white;
+			color:  black;
+			
+		}
+		#btn5:active{
+			transform: translatey(4px);
+		}
+		.b:hover{
+			background-color: black;
+			color: white;
+		}
+		#btn5{
+			height: 60px;
+			width: 60px;
+			background-color: white;
+			color:  red;
+			box-shadow: borde-box;
+			box-shadow: 0 7px black;
+		}
+		
+		#btn5:hover{
+			background-color: red;
+			color: white;
+		}
+		#Home{
+			background-image: url("../img/62.png");
+			float: left;
+		
+		}
+		#container,#firstdiv,#seconddiv,#Home,#Exit{
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		#Home,#Exit{
+			width: 120px;
+			height: 60px;
+			line-height:3.5em;
+			padding-left:20px;
+		}
+		#Exit{
+			background-image: url("../img/64.png");
+			float: right;
+		}
+		#Home:hover{
+			 filter: grayscale(100%);
+
+		}
+		#Exit:hover{
+			 filter: grayscale(100%);
+
+		}
+		.link{
+			text-decoration: none;
+			width: 150px;
+			height: 50px;
+			color: white;
+			
+		}
+		#flailed{
+			display: none;
+			position: absolute;
+			right:150px;
+			top:110px;
+			height: 1000px;
+			width:1000px;			
+			background-size: 100% 100%;
+			
+		}
+		#para{
+			background-color: rgba(242, 242, 242,0.3);
+			width: 300px;
+			height:150px;
+			font-size: 20px;
+			color: purple;
+		}
+		#Score{
+			background-color: purple;
+			color: white;
+			font-size: 15px;
+			width: 60px;
+			border-radius: 50%;
+			box-shadow: border-box;
+			height: 60px;
+		    animation: example 5s linear infinite;
+		}
+		#Score:active{
+			transform: translateY(4px);
+			}
+			@keyframes example {
+			    0%   {background-color: #ff4dff;}
+			    25%  {background-color: #660066;}
+			    50%  {background-color: #cc00cc;}
+			    100% {background-color: #1a001a;}
+			}
+		#win{
+			display:none;
+			width:450px;
+			height: 358px;
+			background: linear-gradient(180deg, white, #ff9999);
+			position: absolute;
+			top: 70px;
+			left: 415px;
+			
+		}
+		#ima1,#ima2,#ima3:hover{
+				cursor: pointer;
+		}
+		.end{
+			width: 170px;
+			height: 120px;
+			animation:move 3s linear 1s infinite reverse, transform 4s;*/
+		}
+		@keyframes move{
+			0%{transform:rotateY(0deg);}
+
+			100%{transform:rotateY(360deg);}
+		}
+		#btnclose{
+			float: right;
+			width: 30px;
+			height: 30px;
+			background-color: white;
+		}
+		#btnclose a{
+			color: red;
+			font-size: 15px;
+			text-decoration: none;
+		}
+		#btnclose a:hover{
+			color: white;
+			
+		}
+		#btnclose:hover{
+			background-color: red;
+			cursor: pointer;
+		}
+		#Wendone{
+			width: 300px;
+			height:150px;
+			display: none;
+			position: absolute;
+			top: 200px;
+			left: 430px;
+			
+		}
+		#False{
+			width: 300px;
+			height:150px;
+			background-image: url("../img/false.jpg");
+			display: none;
+			position: absolute;
+			top: 200px;
+			left: 480px;
+			
+		}
+		#False h1{
+			color: white;
+			margin-left: 30px;
+		}
+		#incorrect{
+			color: red;
+			margin-top: 50px;
+			margin-left: 120px;
+			font-size: 30px;
+		}
+		#correct{
+			color: green;
+			margin-top: 50px;
+			margin-left:120px;
+			font-size: 40px;
+			animation: change 5s linear 1s;
+		}
+		@keyframes change {
+		    0%   {color: #ff4dff;}
+		    25%  {color: #660066;}
+		    50%  {color: #cc00cc;}
+		    100% {color: #1a001a;}
+		}
+		
+		#clear{
+			width: 60px;
+			height: 30px;
+			padding: 2px;
+			background-color: white;
+			color:red;
+			font-size: 15px;
+			border-radius: 5px;
+
+		}
+		.b,#btn5,.link,#para,#Score,#incorrect,#Wendone,#False,#correct,#clear,#btnclose{
+			font-family: "2  Yekan";
+			text-align: center;
+			font-weight: bold;
+			border: none;
+			outline: none;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		#clear:hover{
+			background-color: #ff8080;
+			color: white;
+		}
+		@media only screen and (max-width: 720px){
+		body{
+			padding: 0;
+			margin: 0;
+		}
+		#container{
+			width: 100%;
+			height: 100%;
+		}
+		#Home,#Exit{
+			width: 80px;
+			height: 50px;
+
+		}
+		#image{
+			height: 190px;
+			width: 200px;
+			
+		}
+		#para{
+			width: 250px;
+			height:120px;
+			text-align: center;
+		}
+	#btnTry{
+		width: 50px;
+		height: 50px;
+		border-radius: 10px;
+		position: absolute;
+		background-color: white;
+		left:-150px;
+		top:100px; 
+	}
+		#firstdiv{
+			width: 350px;
+			height: 150px;
+			background-image: url("../img/1.png");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		
+	}
